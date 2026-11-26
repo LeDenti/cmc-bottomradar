@@ -1,0 +1,45 @@
+{
+ "request": {
+  "endpoint": "/v3/index/cmc100-latest",
+  "params": {}
+ },
+ "response": {
+  "data": {
+   "value": 118.19,
+   "value_24h_percentage_change": 2.85,
+   "last_update": "2026-11-26T03:05:00.000Z",
+   "next_update": "2026-11-26T03:10:00.000Z",
+   "constituents": [
+    {
+     "id": 1,
+     "name": "Bitcoin",
+     "symbol": "BTC",
+     "url": "https://coinmarketcap.com/currencies/bitcoin",
+     "weight": 68.01
+    },
+    {
+     "id": 1027,
+     "name": "Ethereum",
+     "symbol": "ETH",
+     "url": "https://coinmarketcap.com/currencies/ethereum",
+     "weight": 11.56
+    },
+    {
+     "id": 1839,
+     "name": "BNB",
+     "symbol": "BNB",
+     "url": "https://coinmarketcap.com/currencies/bnb",
+     "weight": 4.09
+    },
+    "... 97 more"
+   ]
+  },
+  "status": {
+   "timestamp": "2026-11-26T03:10:02.205Z",
+   "error_code": "0",
+   "error_message": "",
+   "elapsed": 3,
+   "credit_count": 1
+  }
+ }
+}

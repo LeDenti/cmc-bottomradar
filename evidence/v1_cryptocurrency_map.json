@@ -1,0 +1,70 @@
+{
+ "request": {
+  "endpoint": "/v1/cryptocurrency/map",
+  "params": {
+   "symbol": "AAVE,ACE,ADA,ALGO,APE,APT,ARB,ASTER,ATOM,AVAX,BCH,BICO,BNB,BOME,BONK,BTC,CHZ,CRV,DASH,DOGE,DOT,DYDX,ENA,ETC,ETH,ETHFI,FARTCOIN,FET,FIL,GALA,HBAR,HYPE,ICP,INJ,JASMY,JUP,KAITO,LDO,LINK,LTC,MEW,MORPHO,NEAR,ONDO,OP,PAXG,PENDLE,PENGU,PEPE,POL,PUMP,PYTH,RENDER,RIVER,SEI,SHIB,SOL,SPX,STX,SUI,SUSHI,TAO,TIA,TRX,UNI,VIRTUAL,W,WIF,WLD,XAUt,XLM,XMR,XRP,XTZ,ZEC,ZEN"
+  }
+ },
+ "response": {
+  "data": [
+   {
+    "id": 7278,
+    "name": "Aave",
+    "symbol": "AAVE",
+    "slug": "aave",
+    "rank": 42,
+    "is_active": 1,
+    "first_historical_data": "2020-10-04T12:55:00.000Z",
+    "last_historical_data": "2026-11-26T03:05:00.000Z",
+    "platform": {
+     "id": 1,
+     "name": "Ethereum",
+     "symbol": "ETH",
+     "slug": "ethereum",
+     "token_address": "0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9"
+    }
+   },
+   {
+    "id": 28674,
+    "name": "Fusionist",
+    "symbol": "ACE",
+    "slug": "fusionist",
+    "rank": 903,
+    "is_active": 1,
+    "first_historical_data": "2023-12-18T06:45:00.000Z",
+    "last_historical_data": "2026-11-26T03:05:00.000Z",
+    "platform": {
+     "id": 14,
+     "name": "BNB Smart Chain (BEP20)",
+     "symbol": "BNB",
+     "slug": "bnb",
+     "token_address": "0xc27A719105A987b4c34116223CAE8bd8F4B5def4"
+    }
+   },
+   {
+    "id": 2311,
+    "name": "ACE (TokenStars)",
+    "symbol": "ACE",
+    "slug": "ace",
+    "rank": null,
+    "is_active": 0,
+    "platform": {
+     "id": 1,
+     "name": "Ethereum",
+     "symbol": "ETH",
+     "slug": "ethereum",
+     "token_address": "0x06147110022b768ba8f99a8f385df11a151a9cc8"
+    }
+   },
+   "... 291 more"
+  ],
+  "status": {
+   "timestamp": "2026-11-26T03:10:00.249Z",
+   "error_code": 0,
+   "error_message": null,
+   "elapsed": 2,
+   "credit_count": 0,
+   "notice": null
+  }
+ }
+}

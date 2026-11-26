@@ -1,0 +1,30 @@
+BottomRadar on CoinMarketCap, 2026-11-26 03:10 UTC
+Settings: example values
+ETH/BTC above its trend mean: no | market falling together (10 min and 1 h): no
+token            price    RSI  ladder next   state
+ETHFI         0.442202   34.3  low    10.0   open low steps [25.0, 20.0, 15.0], -3.58 %, 60 $
+HYPE              61.5   47.9  low    20.0   open low steps [25.0], -1.22 %, 10 $
+ICP            2.01123   44.7  low    15.0   open low steps [25.0, 20.0], +0.28 %, 30 $
+GALA         0.0012913   49.6  low    15.0   open low steps [25.0, 20.0], -0.34 %, 30 $
+AAVE           96.0518   55.7  low    20.0   open low steps [25.0], +0.09 %, 10 $
+POL          0.0765179   55.7  low    20.0   open low steps [25.0], +0.50 %, 10 $
+AVAX           6.67248   58.3  low    20.0   open low steps [25.0], -0.10 %, 10 $
+LDO            0.23585   58.8  low    20.0   open low steps [25.0], +0.70 %, 10 $
+PYTH         0.0486065   54.6  low    15.0   open low steps [25.0, 20.0], -2.64 %, 30 $
+DOT           0.669129   63.4  low    20.0   open low steps [25.0], +0.24 %, 10 $
+ALGO         0.0795047   63.9  low    20.0   open low steps [25.0], -2.40 %, 10 $
+INJ            6.11571   59.1  low    15.0   open low steps [25.0, 20.0], +0.17 %, 30 $
+MEW        0.000295075   63.4  low    15.0   open low steps [25.0, 20.0], +1.37 %, 30 $
+ASTER         0.499446   68.4  low    20.0   open low steps [25.0], +0.26 %, 10 $
+TAO            184.724   63.6  low    15.0   open low steps [25.0, 20.0], +0.45 %, 30 $
+JUP           0.232653   64.7  low    15.0   open low steps [25.0, 20.0], +0.62 %, 30 $
+BONK       2.19129e-06   71.2  low    20.0   open low steps [25.0], +0.95 %, 10 $
+SHIB       3.64331e-06   72.4  low    20.0   open low steps [25.0], +1.24 %, 10 $
+TRX           0.303314   51.0  low    None   open low steps [25.0, 20.0, 15.0, 10.0], -0.56 %, 100 $
+ACE          0.0737796   45.2  low    25.0   
+DYDX         0.0700696   49.4  low    25.0   
+FIL           0.547702   49.5  low    25.0   
+RIVER         0.571045   50.8  low    25.0   
+STX           0.263276   51.2  low    25.0   
+XMR            517.892   51.3  low    25.0   
+API: 16 calls, 366 credits this run

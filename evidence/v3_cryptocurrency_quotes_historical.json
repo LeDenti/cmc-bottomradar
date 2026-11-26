@@ -1,0 +1,254 @@
+{
+ "request": {
+  "endpoint": "/v3/cryptocurrency/quotes/historical",
+  "params": {
+   "id": "1,2,52,74,131,328,512,1027,1321,1437,1698,1831,1839,1958,1975,2010,2011,2280,3773,3794,4030,4066,4642,4705,4847,5176,5426,5690,5805,5994,6535,6538,6636,6758,7080,7083,7226,7278,8000,8425,8916,9481,9543,11840,11841,13502,18876,20947,21159,21794,22861,22974,23095,23149,24478,28081,28177,28321,28324,28674,28752,29210,29420,29587,29814,29870,30126,30171,32196,33597,34104,34466,35763,36341,36507,38417",
+   "interval": "10m",
+   "time_start": "2026-11-26T03:10:01Z",
+   "time_end": "2026-11-26T03:22:14Z",
+   "aux": "price",
+   "skip_invalid": "true"
+  }
+ },
+ "response": {
+  "data": {
+   "9543": {
+    "id": 9543,
+    "name": "Biconomy",
+    "symbol": "BICO",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.01065571169525974,
+        "percent_change_1h": -0.000193329694,
+        "percent_change_24h": 7.224004473074,
+        "percent_change_7d": -7.441224337835,
+        "percent_change_30d": -27.499066001313
+       }
+      }
+     }
+    ]
+   },
+   "7080": {
+    "id": 7080,
+    "name": "Gala",
+    "symbol": "GALA",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.001291814854512796,
+        "percent_change_1h": -0.541369023953,
+        "percent_change_24h": 0.766763553642,
+        "percent_change_7d": -2.974135405568,
+        "percent_change_30d": -23.633559405272
+       }
+      }
+     }
+    ]
+   },
+   "7083": {
+    "id": 7083,
+    "name": "Uniswap",
+    "symbol": "UNI",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 4.777164116347599,
+        "percent_change_1h": -0.256098156404,
+        "percent_change_24h": 3.528911653668,
+        "percent_change_7d": -6.76151911705,
+        "percent_change_30d": -31.671618284313
+       }
+      }
+     }
+    ]
+   },
+   "29420": {
+    "id": 29420,
+    "name": "Virtuals Protocol",
+    "symbol": "VIRTUAL",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.36036903690152183,
+        "percent_change_1h": -0.475045748665,
+        "percent_change_24h": 3.371516040876,
+        "percent_change_7d": -14.682598661796,
+        "percent_change_30d": -40.878769566345
+       }
+      }
+     }
+    ]
+   },
+   "1975": {
+    "id": 1975,
+    "name": "Chainlink",
+    "symbol": "LINK",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 9.17278646432962,
+        "percent_change_1h": -0.535901482763,
+        "percent_change_24h": 4.481890642265,
+        "percent_change_7d": 2.06306630634,
+        "percent_change_30d": -18.693706315494
+       }
+      }
+     }
+    ]
+   },
+   "28177": {
+    "id": 28177,
+    "name": "Pyth Network",
+    "symbol": "PYTH",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.04872796951069566,
+        "percent_change_1h": 0.005630487432,
+        "percent_change_24h": 1.200939186903,
+        "percent_change_7d": -9.04311285073,
+        "percent_change_30d": -32.446461031694
+       }
+      }
+     }
+    ]
+   },
+   "1698": {
+    "id": 1698,
+    "name": "Horizen",
+    "symbol": "ZEN",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 3.777123450889434,
+        "percent_change_1h": -0.207749451185,
+        "percent_change_24h": 5.683641167777,
+        "percent_change_7d": -4.417822777457,
+        "percent_change_30d": -33.400750848016
+       }
+      }
+     }
+    ]
+   },
+   "34104": {
+    "id": 34104,
+    "name": "Morpho",
+    "symbol": "MORPHO",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 1.6039928875393248,
+        "percent_change_1h": -0.369440910603,
+        "percent_change_24h": 3.674212433236,
+        "percent_change_7d": -4.293919683251,
+        "percent_change_30d": -24.634161345644
+       }
+      }
+     }
+    ]
+   },
+   "34466": {
+    "id": 34466,
+    "name": "Pudgy Penguins",
+    "symbol": "PENGU",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.004438744110857943,
+        "percent_change_1h": 0.300156931163,
+        "percent_change_24h": 5.69488807431,
+        "percent_change_7d": -4.893606510738,
+        "percent_change_30d": -39.944138350841
+       }
+      }
+     }
+    ]
+   },
+   "512": {
+    "id": 512,
+    "name": "Stellar",
+    "symbol": "XLM",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.12920295145297253,
+        "percent_change_1h": -0.080283946933,
+        "percent_change_24h": 4.999225296595,
+        "percent_change_7d": -4.490411826017,
+        "percent_change_30d": -22.884183850391
+       }
+      }
+     }
+    ]
+   },
+   "29587": {
+    "id": 29587,
+    "name": "Wormhole",
+    "symbol": "W",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.008492070950233034,
+        "percent_change_1h": -0.0106623412,
+        "percent_change_24h": 6.278374134022,
+        "percent_change_7d": -4.476463236896,
+        "percent_change_30d": -29.783265037958
+       }
+      }
+     }
+    ]
+   },
+   "4642": {
+    "id": 4642,
+    "name": "Hedera",
+    "symbol": "HBAR",
+    "quotes": [
+     {
+      "timestamp": "2026-11-26T03:20:00.000Z",
+      "quote": {
+       "USD": {
+        "price": 0.05351888864150726,
+        "percent_change_1h": 0.153743092883,
+        "percent_change_24h": 6.676342753051,
+        "percent_change_7d": -2.915550248582,
+        "percent_change_30d": -29.692800315291
+       }
+      }
+     }
+    ]
+   },
+   "...": "64 more keys"
+  },
+  "status": {
+   "timestamp": "2026-11-26T03:22:14.925Z",
+   "error_code": 0,
+   "error_message": null,
+   "elapsed": 19,
+   "credit_count": 1,
+   "notice": null
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "request": {
+  "endpoint": "/v3/fear-and-greed/latest",
+  "params": {}
+ },
+ "response": {
+  "data": {
+   "value": 10,
+   "update_time": "2026-11-26T03:08:10.029Z",
+   "value_classification": "Extreme fear"
+  },
+  "status": {
+   "timestamp": "2026-11-26T03:10:00.907Z",
+   "error_code": "0",
+   "error_message": "",
+   "elapsed": 5,
+   "credit_count": 1
+  }
+ }
+}

@@ -1,0 +1,458 @@
+{
+ "AAVE": {
+  "id": 7278,
+  "slug": "aave",
+  "name": "Aave",
+  "rank": 42
+ },
+ "ACE": {
+  "id": 28674,
+  "slug": "fusionist",
+  "name": "Fusionist",
+  "rank": 903
+ },
+ "ADA": {
+  "id": 2010,
+  "slug": "cardano",
+  "name": "Cardano",
+  "rank": 15
+ },
+ "ALGO": {
+  "id": 4030,
+  "slug": "algorand",
+  "name": "Algorand",
+  "rank": 68
+ },
+ "APE": {
+  "id": 18876,
+  "slug": "apecoin-ape",
+  "name": "ApeCoin",
+  "rank": 183
+ },
+ "APT": {
+  "id": 21794,
+  "slug": "aptos",
+  "name": "Aptos",
+  "rank": 92
+ },
+ "ARB": {
+  "id": 11841,
+  "slug": "arbitrum",
+  "name": "Arbitrum",
+  "rank": 63
+ },
+ "ASTER": {
+  "id": 36341,
+  "slug": "aster",
+  "name": "Aster",
+  "rank": 46
+ },
+ "ATOM": {
+  "id": 3794,
+  "slug": "cosmos",
+  "name": "Cosmos",
+  "rank": 70
+ },
+ "AVAX": {
+  "id": 5805,
+  "slug": "avalanche",
+  "name": "Avalanche",
+  "rank": 23
+ },
+ "BCH": {
+  "id": 1831,
+  "slug": "bitcoin-cash",
+  "name": "Bitcoin Cash",
+  "rank": 19
+ },
+ "BICO": {
+  "id": 9543,
+  "slug": "biconomy",
+  "name": "Biconomy",
+  "rank": 821
+ },
+ "BNB": {
+  "id": 1839,
+  "slug": "bnb",
+  "name": "BNB",
+  "rank": 4
+ },
+ "BOME": {
+  "id": 29870,
+  "slug": "book-of-meme",
+  "name": "BOOK OF MEME",
+  "rank": 422
+ },
+ "BONK": {
+  "id": 23095,
+  "slug": "bonk1",
+  "name": "Bonk",
+  "rank": 113
+ },
+ "BTC": {
+  "id": 1,
+  "slug": "bitcoin",
+  "name": "Bitcoin",
+  "rank": 1
+ },
+ "CHZ": {
+  "id": 4066,
+  "slug": "chiliz",
+  "name": "Chiliz",
+  "rank": 160
+ },
+ "CRV": {
+  "id": 6538,
+  "slug": "curve-dao-token",
+  "name": "Curve DAO Token",
+  "rank": 100
+ },
+ "DASH": {
+  "id": 131,
+  "slug": "dash",
+  "name": "Dash",
+  "rank": 79
+ },
+ "DOGE": {
+  "id": 74,
+  "slug": "dogecoin",
+  "name": "Dogecoin",
+  "rank": 12
+ },
+ "DOT": {
+  "id": 6636,
+  "slug": "polkadot-new",
+  "name": "Polkadot",
+  "rank": 52
+ },
+ "DYDX": {
+  "id": 28324,
+  "slug": "dydx-chain",
+  "name": "dYdX",
+  "rank": 199
+ },
+ "ENA": {
+  "id": 30171,
+  "slug": "ethena",
+  "name": "Ethena",
+  "rank": 45
+ },
+ "ETC": {
+  "id": 1321,
+  "slug": "ethereum-classic",
+  "name": "Ethereum Classic",
+  "rank": 58
+ },
+ "ETH": {
+  "id": 1027,
+  "slug": "ethereum",
+  "name": "Ethereum",
+  "rank": 2
+ },
+ "ETHFI": {
+  "id": 29814,
+  "slug": "ether-fi-ethfi",
+  "name": "ether.fi",
+  "rank": 84
+ },
+ "FARTCOIN": {
+  "id": 33597,
+  "slug": "fartcoin",
+  "name": "Fartcoin",
+  "rank": 174
+ },
+ "FET": {
+  "id": 3773,
+  "slug": "artificial-superintelligence-alliance",
+  "name": "Artificial Superintelligence Alliance",
+  "rank": 99
+ },
+ "FIL": {
+  "id": 2280,
+  "slug": "filecoin",
+  "name": "Filecoin",
+  "rank": 78
+ },
+ "GALA": {
+  "id": 7080,
+  "slug": "gala",
+  "name": "Gala",
+  "rank": 190
+ },
+ "HBAR": {
+  "id": 4642,
+  "slug": "hedera",
+  "name": "Hedera",
+  "rank": 32
+ },
+ "HYPE": {
+  "id": 32196,
+  "slug": "hyperliquid",
+  "name": "Hyperliquid",
+  "rank": 9
+ },
+ "ICP": {
+  "id": 8916,
+  "slug": "internet-computer",
+  "name": "Internet Computer",
+  "rank": 53
+ },
+ "INJ": {
+  "id": 7226,
+  "slug": "injective",
+  "name": "Injective",
+  "rank": 73
+ },
+ "JASMY": {
+  "id": 8425,
+  "slug": "jasmy",
+  "name": "JasmyCoin",
+  "rank": 128
+ },
+ "JUP": {
+  "id": 29210,
+  "slug": "jupiter-ag",
+  "name": "Jupiter",
+  "rank": 65
+ },
+ "KAITO": {
+  "id": 35763,
+  "slug": "kaito",
+  "name": "KAITO",
+  "rank": 376
+ },
+ "LDO": {
+  "id": 8000,
+  "slug": "lido-dao",
+  "name": "Lido DAO",
+  "rank": 112
+ },
+ "LINK": {
+  "id": 1975,
+  "slug": "chainlink",
+  "name": "Chainlink",
+  "rank": 14
+ },
+ "LTC": {
+  "id": 2,
+  "slug": "litecoin",
+  "name": "Litecoin",
+  "rank": 21
+ },
+ "MEW": {
+  "id": 30126,
+  "slug": "mew",
+  "name": "cat in a dogs world",
+  "rank": 487
+ },
+ "MORPHO": {
+  "id": 34104,
+  "slug": "morpho",
+  "name": "Morpho",
+  "rank": 56
+ },
+ "NEAR": {
+  "id": 6535,
+  "slug": "near-protocol",
+  "name": "NEAR Protocol",
+  "rank": 20
+ },
+ "ONDO": {
+  "id": 21159,
+  "slug": "ondo-finance",
+  "name": "Ondo",
+  "rank": 44
+ },
+ "OP": {
+  "id": 11840,
+  "slug": "optimism-ethereum",
+  "name": "Optimism",
+  "rank": 125
+ },
+ "PAXG": {
+  "id": 4705,
+  "slug": "pax-gold",
+  "name": "PAX Gold",
+  "rank": 39
+ },
+ "PENDLE": {
+  "id": 9481,
+  "slug": "pendle",
+  "name": "Pendle",
+  "rank": 111
+ },
+ "PENGU": {
+  "id": 34466,
+  "slug": "pudgy-penguins",
+  "name": "Pudgy Penguins",
+  "rank": 98
+ },
+ "PEPE": {
+  "id": 24478,
+  "slug": "pepe",
+  "name": "Pepe",
+  "rank": 43
+ },
+ "POL": {
+  "id": 28321,
+  "slug": "polygon-ecosystem-token",
+  "name": "Polygon (prev. MATIC)",
+  "rank": 62
+ },
+ "PUMP": {
+  "id": 36507,
+  "slug": "pump-fun",
+  "name": "Pump.fun",
+  "rank": 51
+ },
+ "PYTH": {
+  "id": 28177,
+  "slug": "pyth-network",
+  "name": "Pyth Network",
+  "rank": 88
+ },
+ "RENDER": {
+  "id": 5690,
+  "slug": "render",
+  "name": "Render",
+  "rank": 67
+ },
+ "RIVER": {
+  "id": 38417,
+  "slug": "river",
+  "name": "River",
+  "rank": 572
+ },
+ "SEI": {
+  "id": 23149,
+  "slug": "sei",
+  "name": "Sei",
+  "rank": 102
+ },
+ "SHIB": {
+  "id": 5994,
+  "slug": "shiba-inu",
+  "name": "Shiba Inu",
+  "rank": 34
+ },
+ "SOL": {
+  "id": 5426,
+  "slug": "solana",
+  "name": "Solana",
+  "rank": 7
+ },
+ "SPX": {
+  "id": 28081,
+  "slug": "spx6900",
+  "name": "SPX6900",
+  "rank": 103
+ },
+ "STX": {
+  "id": 4847,
+  "slug": "stacks",
+  "name": "Stacks",
+  "rank": 76
+ },
+ "SUI": {
+  "id": 20947,
+  "slug": "sui",
+  "name": "Sui",
+  "rank": 28
+ },
+ "SUSHI": {
+  "id": 6758,
+  "slug": "sushiswap",
+  "name": "SushiSwap",
+  "rank": 340
+ },
+ "TAO": {
+  "id": 22974,
+  "slug": "bittensor",
+  "name": "Bittensor",
+  "rank": 33
+ },
+ "TIA": {
+  "id": 22861,
+  "slug": "celestia",
+  "name": "Celestia",
+  "rank": 91
+ },
+ "TRX": {
+  "id": 1958,
+  "slug": "tron",
+  "name": "TRON",
+  "rank": 8
+ },
+ "UNI": {
+  "id": 7083,
+  "slug": "uniswap",
+  "name": "Uniswap",
+  "rank": 24
+ },
+ "VIRTUAL": {
+  "id": 29420,
+  "slug": "virtual-protocol",
+  "name": "Virtuals Protocol",
+  "rank": 108
+ },
+ "W": {
+  "id": 29587,
+  "slug": "wormhole",
+  "name": "Wormhole",
+  "rank": 294
+ },
+ "WIF": {
+  "id": 28752,
+  "slug": "dogwifhat",
+  "name": "dogwifhat",
+  "rank": 140
+ },
+ "WLD": {
+  "id": 13502,
+  "slug": "worldcoin-org",
+  "name": "Worldcoin",
+  "rank": 59
+ },
+ "XAUT": {
+  "id": 5176,
+  "slug": "tether-gold",
+  "name": "Tether Gold",
+  "rank": 29
+ },
+ "XLM": {
+  "id": 512,
+  "slug": "stellar",
+  "name": "Stellar",
+  "rank": 17
+ },
+ "XMR": {
+  "id": 328,
+  "slug": "monero",
+  "name": "Monero",
+  "rank": 11
+ },
+ "XRP": {
+  "id": 52,
+  "slug": "xrp",
+  "name": "XRP",
+  "rank": 6
+ },
+ "XTZ": {
+  "id": 2011,
+  "slug": "tezos",
+  "name": "Tezos",
+  "rank": 107
+ },
+ "ZEC": {
+  "id": 1437,
+  "slug": "zcash",
+  "name": "Zcash",
+  "rank": 10
+ },
+ "ZEN": {
+  "id": 1698,
+  "slug": "horizen",
+  "name": "Horizen",
+  "rank": 187
+ }
+}
