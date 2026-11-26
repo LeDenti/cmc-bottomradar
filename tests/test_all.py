@@ -110,6 +110,40 @@ class TestParser(unittest.TestCase):
         self.assertEqual(iso_to_epoch("1970-01-01T00:10:00.000Z"), 600)
 
 
+class TestGaps(unittest.TestCase):
+    def test_judge(self):
+        from bottomradar_cmc import gaps
+        now = 1_000_000
+        ex = ["binance", "bybit", "bitget", "gate", "mexc", "whitebit", "zoomex"]
+        cmc_px = {"binance": 100.0, "bybit": 100.02, "bitget": 99.99, "gate": 100.01, "mexc": 100.0,
+                  "whitebit": 100.8,      # +0.8 % on CMC, and really there in the book
+                  "zoomex": 101.5}        # +1.5 % on CMC, nothing in the book
+        quotes = {"AAA": {"t": now, "quotes": [{"exchange": e, "price": p, "last_updated": now - 120,
+                                                "volume_usd": 5e6, "flagged": False} for e, p in cmc_px.items()]
+                          + [{"exchange": "tiny", "price": 150.0, "last_updated": now - 60, "volume_usd": 10, "flagged": False},
+                             {"exchange": "stale", "price": 90.0, "last_updated": now - 5000, "volume_usd": 5e6, "flagged": False}]}}
+        book = {e: [100.0 - 0.005, 100.0 + 0.005] for e in ex}
+        book["whitebit"] = [100.60, 100.70]
+        far = {"t": now + 500, "books": {"AAA": {e: [50.0, 50.1] for e in ex}}, "errors": {}}
+        near = {"t": now + 4, "books": {"AAA": book}, "errors": {}}
+        out = gaps.judge(quotes, [far, near])
+        by = {r["exchange"]: r for r in out["rows"]}
+        self.assertNotIn("tiny", by)       # below the volume floor
+        self.assertNotIn("stale", by)      # quote too old
+        self.assertTrue(by["whitebit"]["is_gap"] and by["whitebit"]["confirmed"])
+        self.assertTrue(by["zoomex"]["is_gap"] and not by["zoomex"]["confirmed"])
+        self.assertFalse(by["binance"]["is_gap"])
+        self.assertEqual(by["zoomex"]["book_skew_s"], 4)   # the nearest book round is used
+        s = out["summary"]
+        self.assertEqual((s["cmc_gaps"], s["confirmed_in_book"], s["not_in_book"]), (2, 1, 1))
+
+    def test_no_books(self):
+        from bottomradar_cmc import gaps
+        q = {"AAA": {"t": 0, "quotes": [{"exchange": "e%d" % i, "price": 100 + i, "last_updated": None,
+                                         "volume_usd": 5e6, "flagged": False} for i in range(6)]}}
+        self.assertEqual(gaps.judge(q, [])["summary"]["quotes_checked"], 0)
+
+
 class FakeCMC(CMC):
     """Serves /v3/cryptocurrency/quotes/historical from a seeded random walk with crashes."""
 

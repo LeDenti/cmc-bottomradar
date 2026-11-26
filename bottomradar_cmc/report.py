@@ -40,7 +40,7 @@ def _num(v, fmt="%+.2f"):
 
 
 def write():
-    scan, rep, ctx = _load("scan.json"), _load("replay_30d.json"), _load("context.json")
+    scan, rep, ctx, gaps = _load("scan.json"), _load("replay_30d.json"), _load("context.json"), _load("gaps.json")
     e = html.escape
     out = ['<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
            "<title>BottomRadar on CMC</title><style>%s</style></head><body><main>" % CSS,
@@ -86,6 +86,29 @@ def write():
                            ("Market falling together", "%.0f %% of bars" % (100 * (rep["market_falling_share"] or 0)))]:
             out.append('<div class="card"><span class="mut">%s</span><b>%s</b></div>' % (label, val))
         out.append("</div>")
+    if gaps:
+        g = gaps["summary"]
+        out.append("<h2>Do the gaps CMC shows exist in the order books?</h2>")
+        out.append('<p class="mut">%s. CMC quotes of %d perpetuals on %d exchanges, compared with the best bid and ask read from '
+                   "each exchange at the same instant. A gap is confirmed when the book shows the same sign and at least half the size. "
+                   "Data-quality check, not a trading signal.</p>" % (e(gaps["generated"]), len(g["tokens"]), len(g["exchanges"])))
+        out.append('<div class="cards">')
+        for label, val in [("Quotes checked", str(g["quotes_checked"])),
+                           ("CMC gaps ≥ %.2f %%" % g["gap_threshold_pct"], str(g["cmc_gaps"])),
+                           ("Confirmed in the book", '<span class="good">%d</span>' % g["confirmed_in_book"]),
+                           ("Not in the book", '<span class="bad">%d</span>' % g["not_in_book"]),
+                           ("Median CMC quote age", "%s s" % g["median_quote_age_s"])]:
+            out.append('<div class="card"><span class="mut">%s</span><b>%s</b></div>' % (label, val))
+        out.append("</div><div class=wrap><table><tr><th>Token</th><th>Exchange</th><th>CMC gap</th><th>Book gap</th>"
+                   "<th>Quote age</th><th>Flagged by CMC</th><th>Verdict</th></tr>")
+        for r in gaps["rows"]:
+            if not r["is_gap"]:
+                continue
+            out.append("<tr><td><b>%s</b></td><td>%s</td><td>%s</td><td>%s</td><td>%s s</td><td>%s</td><td>%s</td></tr>" % (
+                e(r["token"]), e(r["exchange"]), _num(r["cmc_gap_pct"], "%+.2f %%"), _num(r["book_gap_pct"], "%+.2f %%"),
+                r["quote_age_s"], "yes" if r["flagged_by_cmc"] else "no",
+                '<span class="good">confirmed</span>' if r["confirmed"] else '<span class="bad">not in the book</span>'))
+        out.append("</table></div>")
     out.append("<h2>API usage</h2><p class=mut>Every call is logged in <code>runs/calls.jsonl</code> with its credit cost; "
                "one real response per endpoint is kept in <code>runs/evidence/</code>.</p>")
     rows = []

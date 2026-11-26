@@ -1,0 +1,18 @@
+CMC quotes vs real order books, 2026-11-26 10:26 UTC
+80 quotes checked on 11 exchanges, 8 tokens | median CMC quote age 116 s
+CMC gaps of at least 0.20 %: 13 | confirmed in the book: 2 | not in the book: 11
+token  exchange     CMC gap   book gap   age s  verdict
+SUI    zoomex        +1.93%     +0.00%     118  not in the book
+TON    whitebit      +0.85%     +0.66%     121  confirmed
+ETH    htx           -0.81%     +0.00%     115  not in the book
+TON    zoomex        +0.62%     +0.07%     120  not in the book
+BTC    htx           -0.60%     +0.01%     114  not in the book
+HBAR   zoomex        -0.45%     +0.00%     121  not in the book
+DOT    zoomex        -0.34%     +0.01%     122  not in the book
+XRP    zoomex        +0.33%     +0.00%     117  not in the book
+DOT    whitebit      -0.24%     -0.20%     123  confirmed
+ETH    okx           +0.22%     +0.00%     101  not in the book
+DOT    okx           +0.22%     +0.02%     108  not in the book
+SOL    okx           +0.21%     +0.00%     102  not in the book
+BTC    okx           +0.20%     -0.00%     100  not in the book
+API: 8 calls, 8 credits this run

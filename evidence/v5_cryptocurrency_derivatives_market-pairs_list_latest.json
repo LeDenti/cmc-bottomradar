@@ -1,0 +1,183 @@
+{
+ "request": {
+  "endpoint": "/v5/cryptocurrency/derivatives/market-pairs/list/latest",
+  "params": {
+   "crypto_id": 1,
+   "category": "perpetual",
+   "matched_id": 825,
+   "center_type": "cex",
+   "limit": 250,
+   "sort": "volume_24h_strict"
+  }
+ },
+ "response": {
+  "data": {
+   "crypto_id": 1,
+   "crypto_name": "Bitcoin",
+   "symbol": "BTC",
+   "num_market_pairs": 85,
+   "market_pairs": [
+    {
+     "market_id": 1308539,
+     "market_pair_symbol": "BTC/USDT",
+     "category": "perpetual",
+     "fee_type": "percentage",
+     "outlier_detected": false,
+     "exclusions": [
+      "volume"
+     ],
+     "exchange": {
+      "exchange_id": 9449,
+      "exchange_name": "Echobit",
+      "exchange_slug": "echobit"
+     },
+     "market_pair_base": {
+      "crypto_id": 1,
+      "symbol": "BTC",
+      "exchange_symbol": "BTC",
+      "currency_type": "cryptocurrency"
+     },
+     "market_pair_quote": {
+      "crypto_id": 825,
+      "symbol": "USDT",
+      "exchange_symbol": "USDT",
+      "currency_type": "cryptocurrency"
+     },
+     "exchange_reported_quotes": [
+      {
+       "convert_id": 2781,
+       "convert_symbol": "USD",
+       "price": 60797.9,
+       "volume_24h_base": 435481.561,
+       "volume_24h_quote": 26476364397.5219,
+       "open_interest": 988099205.3164862,
+       "index_price": 60725.56751114,
+       "index_basis": 0.00011001672667,
+       "funding_rate": -1.2244456637273e-05,
+       "last_updated": "2026-11-26T10:24:16.000Z"
+      }
+     ],
+     "quotes": [
+      {
+       "convert_id": 2781,
+       "convert_symbol": "USD",
+       "price": 60718.88668298,
+       "volume_24h": 26441955554.88544,
+       "open_interest": 988099205.3164862,
+       "last_updated": "2026-11-26T10:24:16.000Z"
+      }
+     ]
+    },
+    {
+     "market_id": 1447096,
+     "market_pair_symbol": "BTC/USDT",
+     "category": "perpetual",
+     "fee_type": "percentage",
+     "outlier_detected": false,
+     "exclusions": [
+      "price",
+      "volume"
+     ],
+     "exchange": {
+      "exchange_id": 12596,
+      "exchange_name": "WOO X Pro",
+      "exchange_slug": "wooxpro"
+     },
+     "market_pair_base": {
+      "crypto_id": 1,
+      "symbol": "BTC",
+      "exchange_symbol": "BTC",
+      "currency_type": "cryptocurrency"
+     },
+     "market_pair_quote": {
+      "crypto_id": 825,
+      "symbol": "USDT",
+      "exchange_symbol": "USDT",
+      "currency_type": "cryptocurrency"
+     },
+     "exchange_reported_quotes": [
+      {
+       "convert_id": 2781,
+       "convert_symbol": "USD",
+       "price": 60797.9,
+       "volume_24h_base": 316097.74162923,
+       "volume_24h_quote": 19218078885.8,
+       "open_interest": 247627246.89483136,
+       "index_price": 60749.4506424,
+       "index_basis": 0.0004932388879,
+       "funding_rate": 7.88e-05,
+       "last_updated": "2026-11-26T10:24:16.000Z"
+      }
+     ],
+     "quotes": [
+      {
+       "convert_id": 2781,
+       "convert_symbol": "USD",
+       "price": 60719.48665092,
+       "volume_24h": 19193290952.420357,
+       "open_interest": 247627246.89483136,
+       "last_updated": "2026-11-26T10:24:16.000Z"
+      }
+     ]
+    },
+    {
+     "market_id": 47150,
+     "market_pair_symbol": "BTC/USDT",
+     "category": "perpetual",
+     "fee_type": "percentage",
+     "outlier_detected": false,
+     "exclusions": [],
+     "exchange": {
+      "exchange_id": 270,
+      "exchange_name": "Binance",
+      "exchange_slug": "binance"
+     },
+     "market_pair_base": {
+      "crypto_id": 1,
+      "symbol": "BTC",
+      "exchange_symbol": "BTC",
+      "currency_type": "cryptocurrency"
+     },
+     "market_pair_quote": {
+      "crypto_id": 825,
+      "symbol": "USDT",
+      "exchange_symbol": "USDT",
+      "currency_type": "cryptocurrency"
+     },
+     "exchange_reported_quotes": [
+      {
+       "convert_id": 2781,
+       "convert_symbol": "USD",
+       "price": 60797.2,
+       "volume_24h_base": 261103.51060855,
+       "volume_24h_quote": 15874362355.17,
+       "open_interest": 5887712897.2396,
+       "index_price": 60724.05772165,
+       "index_basis": 8.678879692e-05,
+       "funding_rate": 7.981e-05,
+       "last_updated": "2026-11-26T10:24:17.000Z"
+      }
+     ],
+     "quotes": [
+      {
+       "convert_id": 2781,
+       "convert_symbol": "USD",
+       "price": 60718.78755374,
+       "volume_24h": 15853621254.767994,
+       "open_interest": 5887712897.2396,
+       "last_updated": "2026-11-26T10:24:17.000Z"
+      }
+     ]
+    },
+    "... 82 more"
+   ]
+  },
+  "status": {
+   "timestamp": "2026-11-26T10:26:10.918Z",
+   "error_code": "0",
+   "error_message": "",
+   "elapsed": 327,
+   "credit_count": 1
+  }
+ }
+}

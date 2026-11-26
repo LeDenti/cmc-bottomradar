@@ -2,7 +2,7 @@
 
 Run with the official MCP Python SDK (Python >= 3.10):
     uv run --with mcp python -m bottomradar_cmc mcp
-Tools: scan_now, explain(symbol), replay(days), market_context.
+Tools: scan_now, explain(symbol), replay(days), market_context, check_gaps.
 """
 import json
 
@@ -49,6 +49,13 @@ def build():
     def market_context() -> str:
         """CMC Fear & Greed and CMC100 index (context only, not part of the rule)."""
         return json.dumps(screener.context(cmc))
+
+    @app.tool()
+    def check_gaps() -> str:
+        """Do the price gaps CMC shows between exchanges exist in the real order books right now? Data-quality check, not a trading signal."""
+        out = screener.gaps_check(cmc)
+        out["rows"] = [r for r in out["rows"] if r["is_gap"]]
+        return json.dumps(out, default=str)
 
     return app
 

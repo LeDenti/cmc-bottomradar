@@ -4,6 +4,8 @@
 
 > **Example values.** The levels, rebuy zone and exit shipped in this repository are example values chosen for the demo. The live bot's settings are private and are not published here. You can load your own from `private/rule.json` (git-ignored).
 
+Since 26 Nov it also runs a second scan: **do the price gaps CoinMarketCap shows between exchanges exist in the real order books?** (they mostly do not; see below).
+
 Track: **Markets and Trading Tools** (screener + alerts). Bonus: an MCP server so an AI agent can ask it questions.
 
 > Paper positions only. No orders, no wallet, no exchange keys. Not financial advice.
@@ -17,6 +19,40 @@ Track: **Markets and Trading Tools** (screener + alerts). Bonus: an MCP server s
   3. the market is falling *together*: an equal-weight index of 33 liquid tokens is below its short mean on 10-minute **and** 1-hour bars.
 - **Which paper positions are open, at what average price, and where is the exit?** Exit when RSI crosses back up through the exit level **and** the position is in gain; rebuys when price keeps falling below the last buy, with a cap.
 - **Did it work lately?** `replay 30` runs the rule bar by bar over the last 30 days and reports the numbers that matter together: closed trades, median and weighted return, open cost, open latent loss, and market value. Because exits only happen in gain, the win rate of closed trades is always 100 %; the market value is the honest number.
+
+## The second scan: are the gaps real?
+
+A screener that lists "BTC is 0.6 % cheaper on exchange X" invites people to trade a gap. Before showing one, this tool checks it.
+
+`python3 -m bottomradar_cmc gaps` takes, for 8 perpetuals, the quote of every exchange from CoinMarketCap, reads the best bid and best ask of the same exchanges from their own public endpoints at the same instant (no account, no key, no order), and compares:
+
+- **CMC gap**: the exchange's price on CMC against the median of the exchanges on CMC;
+- **book gap**: the exchange's mid price in its own order book against the median of the books.
+
+A CMC gap of at least 0.20 % is *confirmed* when the book shows a gap of the same sign and at least half the size. A real run (26 Nov 2026, 10:26 UTC, 8 credits):
+
+```
+CMC quotes vs real order books, 2026-11-26 10:26 UTC
+80 quotes checked on 11 exchanges, 8 tokens | median CMC quote age 116 s
+CMC gaps of at least 0.20 %: 13 | confirmed in the book: 2 | not in the book: 11
+token  exchange     CMC gap   book gap   age s  verdict
+SUI    zoomex        +1.93%     +0.00%     118  not in the book
+TON    whitebit      +0.85%     +0.66%     121  confirmed
+ETH    htx           -0.81%     +0.00%     115  not in the book
+TON    zoomex        +0.62%     +0.07%     120  not in the book
+BTC    htx           -0.60%     +0.01%     114  not in the book
+HBAR   zoomex        -0.45%     +0.00%     121  not in the book
+DOT    zoomex        -0.34%     +0.01%     122  not in the book
+XRP    zoomex        +0.33%     +0.00%     117  not in the book
+DOT    whitebit      -0.24%     -0.20%     123  confirmed
+ETH    okx           +0.22%     +0.00%     101  not in the book
+DOT    okx           +0.22%     +0.02%     108  not in the book
+SOL    okx           +0.21%     +0.00%     102  not in the book
+BTC    okx           +0.20%     -0.00%     100  not in the book
+API: 8 calls, 8 credits this run
+```
+
+11 of 13 gaps were not in the book. The quotes were about two minutes old (CMC's own `last_updated`), and nothing in the response tells a late or frozen quote from a live one. This is a data-quality check, not a trading signal: the two confirmed gaps sit on thin books.
 
 ## The rule — structure, with EXAMPLE values
 
@@ -39,6 +75,7 @@ These are **not** the live bot's settings. `bottomradar_cmc/rules.py` holds the 
 | `GET /v1/cryptocurrency/map` | resolve the 76 symbols to stable CMC ids once (ties broken by rank; `XAUt` is case-sensitive) | 1 credit, keyless |
 | `GET /v3/cryptocurrency/quotes/historical` `interval=10m` | 10-minute closes for RSI and the market index; 1-hour bars are derived from the same series | 1 credit / 100 points |
 | `GET /v3/cryptocurrency/quotes/historical` `interval=daily` | trend means for ETH/BTC and each token | 1 credit / 100 points |
+| `GET /v5/cryptocurrency/derivatives/market-pairs/list/latest` | every exchange's quote of a perpetual, for the gap check | 1 credit per token |
 | `GET /v3/fear-and-greed/latest` | context card (not part of the rule) | 1 credit, keyless |
 | `GET /v3/index/cmc100-latest` | context card (not part of the rule) | 1 credit, keyless |
 
@@ -50,7 +87,7 @@ The `evidence/` folder holds a real run of 26 Nov 2026 on the free Basic key, wi
 
 - `evidence/calls.jsonl` — every call: endpoint, parameters, HTTP status, `credit_count`, latency (the key is never logged);
 - `evidence/v3_cryptocurrency_quotes_historical.json` and three more — one real response per endpoint, trimmed;
-- `evidence/scan_output.txt`, `evidence/replay_output.txt`, `evidence/report.html`, `evidence/report.png` — what the tool printed from those responses.
+- `evidence/scan_output.txt`, `evidence/replay_output.txt`, `evidence/gaps_output.txt`, `evidence/gaps.json`, `evidence/report.html`, `evidence/report.png` — what the tool printed from those responses.
 
 The call, in `bottomradar_cmc/market.py`:
 
@@ -85,12 +122,13 @@ python3 -m bottomradar_cmc map       # symbol -> CMC id (works without a key)
 python3 -m bottomradar_cmc context   # Fear & Greed + CMC100 (works without a key)
 python3 -m bottomradar_cmc scan      # signals now, paper positions, filters
 python3 -m bottomradar_cmc replay 30 # last 30 days, bar by bar
+python3 -m bottomradar_cmc gaps      # are the gaps CMC shows in the real order books?
 python3 -m bottomradar_cmc report    # runs/report.html
 python3 -m bottomradar_cmc calls     # calls and credits used
 python3 -m bottomradar_cmc watch 20  # scan every 20 minutes
 ```
 
-MCP server (tools `scan_now`, `explain`, `replay`, `market_context`):
+MCP server (tools `scan_now`, `explain`, `replay`, `market_context`, `check_gaps`):
 
 ```bash
 uv run --python 3.12 --with mcp python -m bottomradar_cmc mcp
@@ -110,6 +148,7 @@ python3 -m unittest discover -s tests -v
 | Each following scan | 1 (measured) |
 | Daily refresh of the trend means | ~1 |
 | Replay 30 days | 3 435 (measured) |
+| Gap check, 8 perpetuals | 8 (measured) |
 
 On the free Basic plan (15 000 credits a month), a scan every 20 minutes and a replay a week fit.
 
@@ -121,7 +160,9 @@ bottomradar_cmc/
   market.py     symbol map, disk cache, incremental fetch
   rules.py      the rule structure and its example values
   engine.py     bar-by-bar run, market index, the three filters
-  screener.py   scan, replay, context
+  screener.py   scan, replay, context, gap check
+  gaps.py       CMC quotes of perpetuals against the order books
+  books.py      best bid / ask from 11 exchanges' public endpoints (no key)
   report.py     static HTML report
   mcp_server.py MCP tools for agents
   data/         token universe (74 + 33 liquid) and the resolved CMC ids

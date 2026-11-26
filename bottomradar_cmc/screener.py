@@ -117,6 +117,14 @@ def replay(days=30, cmc=None, now=None):
     return out
 
 
+def gaps_check(cmc=None):
+    """CMC quotes of perpetuals against the exchanges' own order books, right now."""
+    from . import gaps
+    out = gaps.check(cmc or CMC())
+    _save("gaps.json", out)
+    return out
+
+
 def public_rule():
     """The parameters, or only their source when they are private settings."""
     if rules.SOURCE != "example values":

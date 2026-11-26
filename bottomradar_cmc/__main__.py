@@ -4,7 +4,8 @@
   python3 -m bottomradar_cmc context    Fear & Greed + CMC100 (works without a key)
   python3 -m bottomradar_cmc scan       live screener: signals now, paper positions, filters
   python3 -m bottomradar_cmc replay 30  what the rule did over the last N days (max ~30 on intraday plans)
-  python3 -m bottomradar_cmc report     write runs/report.html from the last scan / replay
+  python3 -m bottomradar_cmc gaps       do the price gaps CMC shows between exchanges exist in the real order books?
+  python3 -m bottomradar_cmc report     write runs/report.html from the last scan / replay / gaps
   python3 -m bottomradar_cmc calls      API calls and credits used so far
   python3 -m bottomradar_cmc watch 10   scan every N minutes
 """
@@ -66,6 +67,26 @@ def cmd_replay(days):
     print("API: %d calls, %d credits this run" % (a["calls"], a["credits"]))
 
 
+def cmd_gaps():
+    from .screener import gaps_check
+    out = gaps_check()
+    s = out["summary"]
+    print("CMC quotes vs real order books, %s" % out["generated"])
+    print("%d quotes checked on %d exchanges, %d tokens | median CMC quote age %s s"
+          % (s["quotes_checked"], len(s["exchanges"]), len(s["tokens"]), s["median_quote_age_s"]))
+    print("CMC gaps of at least %.2f %%: %d | confirmed in the book: %d | not in the book: %d"
+          % (s["gap_threshold_pct"], s["cmc_gaps"], s["confirmed_in_book"], s["not_in_book"]))
+    print("%-6s %-9s %10s %10s %7s  %s" % ("token", "exchange", "CMC gap", "book gap", "age s", "verdict"))
+    for r in out["rows"]:
+        if not r["is_gap"]:
+            continue
+        print("%-6s %-9s %+9.2f%% %+9.2f%% %7s  %s" % (r["token"], r["exchange"], r["cmc_gap_pct"], r["book_gap_pct"],
+              r["quote_age_s"], "confirmed" if r["confirmed"] else "not in the book"))
+    if out["book_errors"]:
+        print("order books not read: %s" % ", ".join(sorted(out["book_errors"])))
+    print("API: %d calls, %d credits this run" % (out["api"]["calls"], out["api"]["credits"]))
+
+
 def cmd_context():
     from .screener import context
     print(json.dumps(context(), indent=1))
@@ -99,6 +120,8 @@ def main(argv):
         cmd_replay(int(argv[2]) if len(argv) > 2 else 30)
     elif cmd == "context":
         cmd_context()
+    elif cmd == "gaps":
+        cmd_gaps()
     elif cmd == "calls":
         cmd_calls()
     elif cmd == "report":
