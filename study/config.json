@@ -1,0 +1,192 @@
+{
+  "_note": "Paper scanner only. Fees and gas below are public estimates, not trading settings.",
+  "trade_size_usd": 1000,
+  "perp": {
+    "tokens": {
+      "BTC": 1,
+      "ETH": 1027,
+      "XRP": 52,
+      "BNB": 1839,
+      "SOL": 5426,
+      "DOGE": 74,
+      "ADA": 2010,
+      "TRX": 1958,
+      "LINK": 1975,
+      "AVAX": 5805,
+      "SUI": 20947,
+      "LTC": 2,
+      "DOT": 6636,
+      "TON": 11419,
+      "HBAR": 4642
+    },
+    "quote_id": 825,
+    "min_volume_usd": 1000000,
+    "max_age_s": 300,
+    "max_skew_s": 120,
+    "taker_fee_pct": 0.05,
+    "orders_per_trade": 4,
+    "aberrant_pct": 3,
+    "major_exchanges": [
+      "binance",
+      "bybit",
+      "okx",
+      "bitget",
+      "gate",
+      "kucoin",
+      "mexc",
+      "htx",
+      "bingx",
+      "kraken",
+      "deribit",
+      "bitmex",
+      "crypto-com-exchange",
+      "coinbase-international-exchange",
+      "whitebit",
+      "phemex"
+    ]
+  },
+  "dex": {
+    "networks": {
+      "ethereum": {
+        "dex_ids": [
+          1348,
+          1069,
+          1141
+        ],
+        "gas_usd": 1.5,
+        "network_id": 1
+      },
+      "bsc": {
+        "dex_ids": [
+          1344,
+          6706,
+          6444
+        ],
+        "gas_usd": 0.05,
+        "network_id": 14
+      },
+      "base": {
+        "dex_ids": [
+          9391,
+          7791,
+          35102,
+          35111,
+          8521,
+          11951
+        ],
+        "gas_usd": 0.02,
+        "network_id": 199
+      },
+      "arbitrum": {
+        "dex_ids": [
+          1478,
+          6799,
+          1701,
+          9364,
+          7930,
+          7475
+        ],
+        "gas_usd": 0.03,
+        "network_id": 51
+      },
+      "solana": {
+        "dex_ids": [
+          1426,
+          10557,
+          9882,
+          1342,
+          10403
+        ],
+        "gas_usd": 0.01,
+        "network_id": 16
+      }
+    },
+    "pages": 2,
+    "min_liquidity_usd": 100000,
+    "max_liquidity_usd": 5000000000,
+    "min_volume_usd": 100000,
+    "max_skew_s": 300,
+    "fee_pct_prudent": 0.3,
+    "fee_pct_optimistic": 0.05,
+    "aberrant_pct": 20,
+    "pool_outlier_pct": 3
+  },
+  "linked": {
+    "pairs": [
+      [
+        "WBTC",
+        3717,
+        "BTC",
+        1
+      ],
+      [
+        "cbBTC",
+        32994,
+        "BTC",
+        1
+      ],
+      [
+        "BTCB",
+        4023,
+        "BTC",
+        1
+      ],
+      [
+        "WETH",
+        2396,
+        "ETH",
+        1027
+      ],
+      [
+        "stETH",
+        8085,
+        "ETH",
+        1027
+      ],
+      [
+        "WBNB",
+        7192,
+        "BNB",
+        1839
+      ],
+      [
+        "USDC",
+        3408,
+        "USDT",
+        825
+      ],
+      [
+        "DAI",
+        4943,
+        "USDT",
+        825
+      ],
+      [
+        "USDe",
+        29470,
+        "USDT",
+        825
+      ],
+      [
+        "FDUSD",
+        26081,
+        "USDT",
+        825
+      ],
+      [
+        "PYUSD",
+        27772,
+        "USDT",
+        825
+      ],
+      [
+        "PAXG",
+        4705,
+        "XAUt",
+        5176
+      ]
+    ],
+    "cex_taker_fee_pct": 0.1,
+    "orders_per_trade": 2
+  }
+}

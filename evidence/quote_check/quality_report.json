@@ -1,0 +1,1264 @@
+{
+ "bias": {
+  "binance": {
+   "slow": 167,
+   "slow_in_ctx": 37,
+   "missing": 64,
+   "frozen": 0
+  },
+  "bybit": {
+   "slow": 169,
+   "slow_in_ctx": 38,
+   "missing": 70,
+   "frozen": 0
+  },
+  "okx": {
+   "slow": 88,
+   "slow_in_ctx": 23,
+   "missing": 73,
+   "frozen": 0
+  },
+  "bitget": {
+   "slow": 127,
+   "slow_in_ctx": 31,
+   "missing": 75,
+   "frozen": 0
+  },
+  "kucoin": {
+   "slow": 90,
+   "slow_in_ctx": 22,
+   "missing": 78,
+   "frozen": 0
+  },
+  "mexc": {
+   "slow": 129,
+   "slow_in_ctx": 30,
+   "missing": 77,
+   "frozen": 0
+  },
+  "gate": {
+   "slow": 1362,
+   "slow_in_ctx": 185,
+   "missing": 83,
+   "frozen": 0
+  },
+  "htx": {
+   "slow": 191,
+   "slow_in_ctx": 36,
+   "missing": 81,
+   "frozen": 324
+  },
+  "whitebit": {
+   "slow": 79,
+   "slow_in_ctx": 19,
+   "missing": 72,
+   "frozen": 0
+  },
+  "zoomex": {
+   "slow": 137,
+   "slow_in_ctx": 33,
+   "missing": 71,
+   "frozen": 0
+  },
+  "phemex": {
+   "slow": 79,
+   "slow_in_ctx": 19,
+   "missing": 65,
+   "frozen": 0
+  }
+ },
+ "finding": {
+  "quotes": 70637,
+  "gaps": 5545,
+  "confirmed": 547,
+  "confirmed_at_stamp": 944,
+  "flagged_quotes": 15947,
+  "flagged_gaps": 5152,
+  "false": 4998,
+  "median_gap_pct": 0.493062722164872,
+  "median_book_pct": 0.010805554054793554
+ },
+ "sizes": {
+  "pairs": 19649,
+  "top": {
+   "median": -0.015146925174192027,
+   "positive": 5033,
+   "above_fees": 1041,
+   "unfillable": 0
+  },
+  "1000": {
+   "median": -0.027998076609692113,
+   "positive": 4433,
+   "above_fees": 377,
+   "unfillable": 0
+  },
+  "10000": {
+   "median": -0.05743917739537974,
+   "positive": 2144,
+   "above_fees": 0,
+   "unfillable": 4
+  }
+ },
+ "causes": {
+  "unexplained": 224,
+  "late_other_time": 1536,
+  "frozen": 2456,
+  "off_for_long": 151,
+  "others_late": 339,
+  "wide_spread": 15,
+  "late_as_stamped": 276,
+  "mark_or_index": 1
+ },
+ "frozen_quotes": {
+  "binance": {
+   "quotes": 8389,
+   "frozen": 317
+  },
+  "bybit": {
+   "quotes": 8406,
+   "frozen": 397
+  },
+  "okx": {
+   "quotes": 7386,
+   "frozen": 446
+  },
+  "bitget": {
+   "quotes": 7909,
+   "frozen": 338
+  },
+  "kucoin": {
+   "quotes": 7926,
+   "frozen": 212
+  },
+  "mexc": {
+   "quotes": 7921,
+   "frozen": 238
+  },
+  "gate": {
+   "quotes": 852,
+   "frozen": 48
+  },
+  "htx": {
+   "quotes": 7153,
+   "frozen": 524
+  },
+  "whitebit": {
+   "quotes": 3965,
+   "frozen": 194
+  },
+  "zoomex": {
+   "quotes": 2818,
+   "frozen": 2249
+  },
+  "phemex": {
+   "quotes": 7912,
+   "frozen": 326
+  }
+ },
+ "lag": {
+  "binance": {
+   "claimed": 132.29999995231628,
+   "measured": 150,
+   "err": 0.026080153003549267,
+   "ref": {
+    "last": 5,
+    "mid": 10
+   }
+  },
+  "bybit": {
+   "claimed": 132.70000004768372,
+   "measured": 120,
+   "err": 0.023573829067469187,
+   "ref": {
+    "last": 8,
+    "mid": 7
+   }
+  },
+  "okx": {
+   "claimed": 146.59999990463257,
+   "measured": 840,
+   "err": 0.0302388872089443,
+   "ref": {
+    "last": 8,
+    "mid": 7
+   }
+  },
+  "bitget": {
+   "claimed": 132.90000009536743,
+   "measured": 120.0,
+   "err": 0.021481556968772075,
+   "ref": {
+    "mid": 4,
+    "last": 10
+   }
+  },
+  "kucoin": {
+   "claimed": 129.90000009536743,
+   "measured": 150.0,
+   "err": 0.02670681841625,
+   "ref": {
+    "mid": 5,
+    "last": 9
+   }
+  },
+  "mexc": {
+   "claimed": 132.90000009536743,
+   "measured": 150.0,
+   "err": 0.02513210245993769,
+   "ref": {
+    "mid": 9,
+    "last": 4,
+    "mark": 1
+   }
+  },
+  "gate": {
+   "claimed": 130.14999997615814,
+   "measured": 150.0,
+   "err": 0.014072619150889976,
+   "ref": {
+    "last": 2
+   }
+  },
+  "htx": {
+   "claimed": 158.40000009536743,
+   "measured": 150,
+   "err": 0.0264208853082204,
+   "ref": {
+    "last": 12,
+    "mid": 1
+   }
+  },
+  "whitebit": {
+   "claimed": 196.0,
+   "measured": 180,
+   "err": 0.03124436700113753,
+   "ref": {
+    "last": 7
+   }
+  },
+  "zoomex": {
+   "claimed": 144.0,
+   "measured": 5400,
+   "err": 0.7525782774319478,
+   "ref": {
+    "last": 1,
+    "mark": 1,
+    "index": 1,
+    "mid": 2
+   }
+  },
+  "phemex": {
+   "claimed": 133.40000009536743,
+   "measured": 150.0,
+   "err": 0.022307587862990808,
+   "ref": {
+    "mid": 7,
+    "last": 7
+   }
+  }
+ },
+ "shared": {
+  "binance=mexc": 0.5431647570130383,
+  "binance=phemex": 0.443197479818862,
+  "bybit=zoomex": 0.9165351223362274,
+  "mexc=phemex": 0.35202583675866117
+ },
+ "thin": {
+  "TON/phemex": {
+   "spread": 0.10504201680672232,
+   "rt1000": 0.37080113475916887,
+   "rt10000": 1.5808563810692733,
+   "usd": 43607.5
+  },
+  "TON/whitebit": {
+   "spread": 0.5771410903844032,
+   "rt1000": 0.6653611160837736,
+   "rt10000": 0.9188644065228457,
+   "usd": 234318
+  },
+  "HBAR/htx": {
+   "spread": 0.23499638467099349,
+   "rt1000": 0.307232100747834,
+   "rt10000": 0.6490439963243722,
+   "usd": 20151
+  },
+  "TON/htx": {
+   "spread": 0.1719342608695107,
+   "rt1000": 0.27627200124465956,
+   "rt10000": 0.5602094185372941,
+   "usd": 37130.5
+  },
+  "TON/kucoin": {
+   "spread": 0.0826531666494601,
+   "rt1000": 0.16528171949825587,
+   "rt10000": 0.5168314874997137,
+   "usd": 58600
+  },
+  "DOT/htx": {
+   "spread": 0.18007202881151763,
+   "rt1000": 0.34428486668249825,
+   "rt10000": 0.5132044263332913,
+   "usd": 77936
+  },
+  "AVAX/htx": {
+   "spread": 0.2523583488553971,
+   "rt1000": 0.3151366137853273,
+   "rt10000": 0.4459520493243163,
+   "usd": 217056
+  },
+  "DOT/whitebit": {
+   "spread": 0.07428316743425256,
+   "rt1000": 0.14371734933196212,
+   "rt10000": 0.40194403814921564,
+   "usd": 932817
+  },
+  "ADA/whitebit": {
+   "spread": 0.13495276653172628,
+   "rt1000": 0.19511553229343281,
+   "rt10000": 0.3561624258404672,
+   "usd": 3397945
+  },
+  "DOT/gate": {
+   "spread": 0.14903129657228842,
+   "rt1000": 0.15082956259426794,
+   "rt10000": 0.2776741111129355,
+   "usd": 3190605.0
+  },
+  "DOT/phemex": {
+   "spread": 0.1494768310911887,
+   "rt1000": 0.14992503748125774,
+   "rt10000": 0.25767973257522225,
+   "usd": 1196679.0
+  },
+  "TON/gate": {
+   "spread": 0.08359896172875914,
+   "rt1000": 0.12204531049214706,
+   "rt10000": 0.24501069920050966,
+   "usd": 78617.5
+  },
+  "TON/bybit": {
+   "spread": 0.10277492291881352,
+   "rt1000": 0.10405827263268996,
+   "rt10000": 0.2306283881902793,
+   "usd": 396835
+  },
+  "TON/zoomex": {
+   "spread": 0.10277492291881352,
+   "rt1000": 0.10395010395012338,
+   "rt10000": 0.23032653201242592,
+   "usd": 397117
+  },
+  "TON/okx": {
+   "spread": 0.010487127080383019,
+   "rt1000": 0.07397069976402548,
+   "rt10000": 0.21743841559236365,
+   "usd": 42523.0
+  }
+ },
+ "indicators": {
+  "binance": {
+   "quotes": 8389,
+   "distance": 0.05552470849528035,
+   "frozen": 317,
+   "lag": 150,
+   "shared_with": null,
+   "gaps": 38,
+   "confirmed": 0
+  },
+  "bybit": {
+   "quotes": 8406,
+   "distance": 0.05372250838259762,
+   "frozen": 397,
+   "lag": 120,
+   "shared_with": "zoomex",
+   "gaps": 17,
+   "confirmed": 0
+  },
+  "okx": {
+   "quotes": 7386,
+   "distance": 0.1219087462959012,
+   "frozen": 446,
+   "lag": 840,
+   "shared_with": null,
+   "gaps": 1881,
+   "confirmed": 0
+  },
+  "bitget": {
+   "quotes": 7909,
+   "distance": 0.05040234979230007,
+   "frozen": 338,
+   "lag": 120.0,
+   "shared_with": null,
+   "gaps": 14,
+   "confirmed": 2
+  },
+  "kucoin": {
+   "quotes": 7926,
+   "distance": 0.05358519096914649,
+   "frozen": 212,
+   "lag": 150.0,
+   "shared_with": null,
+   "gaps": 58,
+   "confirmed": 0
+  },
+  "mexc": {
+   "quotes": 7921,
+   "distance": 0.05268703898841931,
+   "frozen": 238,
+   "lag": 150.0,
+   "shared_with": null,
+   "gaps": 14,
+   "confirmed": 0
+  },
+  "gate": {
+   "quotes": 852,
+   "distance": 0.0679440254239716,
+   "frozen": 48,
+   "lag": 150.0,
+   "shared_with": null,
+   "gaps": 6,
+   "confirmed": 0
+  },
+  "htx": {
+   "quotes": 7153,
+   "distance": 0.05911038865080709,
+   "frozen": 524,
+   "lag": 150,
+   "shared_with": null,
+   "gaps": 493,
+   "confirmed": 1
+  },
+  "whitebit": {
+   "quotes": 3965,
+   "distance": 0.0745434215430496,
+   "frozen": 194,
+   "lag": 180,
+   "shared_with": null,
+   "gaps": 793,
+   "confirmed": 536
+  },
+  "zoomex": {
+   "quotes": 2818,
+   "distance": 0.9363921783074325,
+   "frozen": 2249,
+   "lag": 5400,
+   "shared_with": "bybit",
+   "gaps": 2153,
+   "confirmed": 0
+  },
+  "phemex": {
+   "quotes": 7912,
+   "distance": 0.05234598729293438,
+   "frozen": 326,
+   "lag": 150.0,
+   "shared_with": null,
+   "gaps": 78,
+   "confirmed": 8
+  }
+ },
+ "real_gaps": {
+  "pairs": 810,
+  "measures": 7780410,
+  "median_pct": -0.01757932671179232,
+  "above_fees": 51350,
+  "most_persistent": [
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "bitget",
+    "rounds": 5116,
+    "share_above_fees": 0.941164972634871,
+    "median_pct": 0.32118111771235514,
+    "min_pct": -0.06149116064566179,
+    "max_pct": 0.5569338261353804
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "okx",
+    "rounds": 5147,
+    "share_above_fees": 0.9366621332815233,
+    "median_pct": 0.2908259977668744,
+    "min_pct": -0.07172498591116695,
+    "max_pct": 0.5060984867655249
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "binance",
+    "rounds": 5079,
+    "share_above_fees": 0.9271510139791298,
+    "median_pct": 0.254738129203185,
+    "min_pct": -0.13319330959759923,
+    "max_pct": 0.44562602861121253
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "mexc",
+    "rounds": 5109,
+    "share_above_fees": 0.9264043844196516,
+    "median_pct": 0.25729200168228755,
+    "min_pct": -0.23776296066573308,
+    "max_pct": 0.47174648753974446
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "gate",
+    "rounds": 3884,
+    "share_above_fees": 0.8308444902162719,
+    "median_pct": 0.24756624335236527,
+    "min_pct": -0.2893309222423172,
+    "max_pct": 0.6080105388493406
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "phemex",
+    "rounds": 5154,
+    "share_above_fees": 0.7417539774932091,
+    "median_pct": 0.24431210871889536,
+    "min_pct": -0.24864668859591885,
+    "max_pct": 0.3879332346485657
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "zoomex",
+    "rounds": 5107,
+    "share_above_fees": 0.6682984139416487,
+    "median_pct": 0.23875639062622475,
+    "min_pct": -0.1346104064198776,
+    "max_pct": 0.4351786256451746
+   },
+   {
+    "token": "TON",
+    "sell": "whitebit",
+    "buy": "bybit",
+    "rounds": 5073,
+    "share_above_fees": 0.668046520796373,
+    "median_pct": 0.23873780361221508,
+    "min_pct": -0.1346104064198776,
+    "max_pct": 0.4351786256451746
+   }
+  ]
+ },
+ "replay": {
+  "0.20_lag0": {
+   "positions": 419,
+   "closed_with_profit": 368,
+   "left_open": 51,
+   "median_close_s": 30.0,
+   "median_open_result_pct": -0.2477950826094359,
+   "sum_pct": 17.201775768288897,
+   "mean_pct": 0.041054357442216936,
+   "median_pct": 0.05211408509878812,
+   "winners": 368
+  },
+  "0.30_lag0": {
+   "positions": 128,
+   "closed_with_profit": 106,
+   "left_open": 22,
+   "median_close_s": 30.0,
+   "median_open_result_pct": -0.37256920090610723,
+   "sum_pct": 7.731356187108559,
+   "mean_pct": 0.060401220211785615,
+   "median_pct": 0.13761698949599405,
+   "winners": 106
+  },
+  "0.50_lag0": {
+   "positions": 13,
+   "closed_with_profit": 9,
+   "left_open": 4,
+   "median_close_s": 150.0,
+   "median_open_result_pct": -0.613623780425931,
+   "sum_pct": -1.980895865137993,
+   "mean_pct": -0.15237660501061484,
+   "median_pct": 0.039581370626854684,
+   "winners": 9
+  },
+  "0.20_lag1": {
+   "positions": 361,
+   "closed_with_profit": 46,
+   "left_open": 315,
+   "median_close_s": 37565.60000002384,
+   "median_open_result_pct": -0.26594130532812815,
+   "sum_pct": -93.2134403514372,
+   "mean_pct": -0.25820897604276233,
+   "median_pct": -0.24485562097000985,
+   "winners": 46
+  },
+  "0.30_lag1": {
+   "positions": 117,
+   "closed_with_profit": 16,
+   "left_open": 101,
+   "median_close_s": 49934.39999997616,
+   "median_open_result_pct": -0.3296566059835505,
+   "sum_pct": -36.945617430491254,
+   "mean_pct": -0.31577450795291667,
+   "median_pct": -0.2967040658738055,
+   "winners": 16
+  },
+  "0.50_lag1": {
+   "positions": 13,
+   "closed_with_profit": 9,
+   "left_open": 4,
+   "median_close_s": 120.0,
+   "median_open_result_pct": -0.7922213408043479,
+   "sum_pct": -2.6769293026266414,
+   "mean_pct": -0.2059176386635878,
+   "median_pct": 0.0396351876686728,
+   "winners": 9
+  }
+ },
+ "carry": {
+  "days": 1.8298634259264779,
+  "payments": 816,
+  "left_out": [
+   "phemex"
+  ],
+  "pairs": 660,
+  "1000": {
+   "pays_back_in_1_day": 0,
+   "pays_back_in_7_days": 28,
+   "median_days": 31.047783900686813
+  },
+  "10000": {
+   "pays_back_in_1_day": 0,
+   "pays_back_in_7_days": 12,
+   "median_days": 37.309564463797294
+  },
+  "best": [
+   {
+    "token": "TRX",
+    "short": "htx",
+    "long": "kucoin",
+    "payments_short": 5,
+    "payments_long": 11,
+    "per_day_pct": 0.08394069077708946,
+    "windows": 7,
+    "windows_positive": 7,
+    "cost_pct": {
+     "1000": 0.3338415951223637,
+     "10000": 0.45420048610104163
+    },
+    "days_to_pay": {
+     "1000": 3.9771127927563055,
+     "10000": 5.410969124702627
+    }
+   },
+   {
+    "token": "SUI",
+    "short": "whitebit",
+    "long": "htx",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.0668029948798181,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.34844991421596455,
+     "10000": 0.4263683311417353
+    },
+    "days_to_pay": {
+     "1000": 5.2160822256972645,
+     "10000": 6.382473299420079
+    }
+   },
+   {
+    "token": "TRX",
+    "short": "htx",
+    "long": "bybit",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.06330527096105495,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.3215224582771124,
+     "10000": 0.3376485931164795
+    },
+    "days_to_pay": {
+     "1000": 5.078920813322341,
+     "10000": 5.333656866016717
+    }
+   },
+   {
+    "token": "TRX",
+    "short": "htx",
+    "long": "zoomex",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.06330527096105495,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.3215224582771124,
+     "10000": 0.3376596488799842
+    },
+    "days_to_pay": {
+     "1000": 5.078920813322341,
+     "10000": 5.333831508085804
+    }
+   },
+   {
+    "token": "SUI",
+    "short": "okx",
+    "long": "htx",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.05867031509339346,
+    "windows": 5,
+    "windows_positive": 4,
+    "cost_pct": {
+     "1000": 0.2298418389216293,
+     "10000": 0.3068923676676992
+    },
+    "days_to_pay": {
+     "1000": 3.917514991282372,
+     "10000": 5.230794605060108
+    }
+   },
+   {
+    "token": "TRX",
+    "short": "htx",
+    "long": "whitebit",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.05821527360494942,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.3318641525150377,
+     "10000": 0.4504291470497244
+    },
+    "days_to_pay": {
+     "1000": 5.700637168985543,
+     "10000": 7.737301899607138
+    }
+   },
+   {
+    "token": "SUI",
+    "short": "bitget",
+    "long": "htx",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.05784057737497261,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.23449479225947628,
+     "10000": 0.326414855890733
+    },
+    "days_to_pay": {
+     "1000": 4.054157183447156,
+     "10000": 5.643354038024721
+    }
+   },
+   {
+    "token": "TRX",
+    "short": "htx",
+    "long": "binance",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.05750429158215649,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.29184150009248216,
+     "10000": 0.31680251225619777
+    },
+    "days_to_pay": {
+     "1000": 5.075125561290111,
+     "10000": 5.509197723157435
+    }
+   },
+   {
+    "token": "TRX",
+    "short": "htx",
+    "long": "mexc",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.057381331585900995,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.29183625516010486,
+     "10000": 0.30916176670897616
+    },
+    "days_to_pay": {
+     "1000": 5.085909425493554,
+     "10000": 5.387845805672091
+    }
+   },
+   {
+    "token": "SUI",
+    "short": "bybit",
+    "long": "htx",
+    "payments_short": 5,
+    "payments_long": 5,
+    "per_day_pct": 0.056995705578479244,
+    "windows": 5,
+    "windows_positive": 5,
+    "cost_pct": {
+     "1000": 0.2298932056793877,
+     "10000": 0.30817315261810735
+    },
+    "days_to_pay": {
+     "1000": 4.033518022912099,
+     "10000": 5.4069539010052905
+    }
+   }
+  ]
+ },
+ "params": {
+  "gap_threshold_pct": 0.2,
+  "slow_s": 5.0,
+  "near_s": 20,
+  "frozen_rounds": 10,
+  "same_price_tol_pct": 0.02,
+  "frozen_quote_s": 290,
+  "sizes_usd": [
+   1000,
+   10000
+  ]
+ },
+ "coverage": {
+  "generated_utc": "2026-11-28T05:19:02Z",
+  "book_rounds": 5277,
+  "first_round": 1795677851.9,
+  "last_round": 1795842281.8,
+  "holes_over_90s": 3,
+  "longest_hole_s": 5841.799999952316,
+  "rounds_inside_context_cycle": 576,
+  "cmc_snapshots": 578,
+  "cmc_credits": 8661,
+  "cmc_first": 1795687698.9,
+  "cmc_last": 1795842235.0,
+  "context_cycles": 529,
+  "tokens": [
+   "BTC",
+   "ETH",
+   "XRP",
+   "BNB",
+   "SOL",
+   "DOGE",
+   "ADA",
+   "TRX",
+   "LINK",
+   "AVAX",
+   "SUI",
+   "LTC",
+   "DOT",
+   "TON",
+   "HBAR"
+  ],
+  "exchanges": [
+   "binance",
+   "bybit",
+   "okx",
+   "bitget",
+   "kucoin",
+   "mexc",
+   "gate",
+   "htx",
+   "whitebit",
+   "zoomex",
+   "phemex"
+  ]
+ },
+ "thresholds": {
+  "0.10": {
+   "gaps": 9909,
+   "confirmed": 1055
+  },
+  "0.20": {
+   "gaps": 5545,
+   "confirmed": 547
+  },
+  "0.50": {
+   "gaps": 2743,
+   "confirmed": 399
+  },
+  "1.00": {
+   "gaps": 1413,
+   "confirmed": 26
+  }
+ },
+ "by_exchange": {
+  "binance": {
+   "quotes": 8389,
+   "gaps": 38,
+   "confirmed": 0,
+   "false_by_cause": {
+    "late_other_time": 4,
+    "others_late": 20,
+    "late_as_stamped": 6,
+    "wide_spread": 2,
+    "frozen": 3,
+    "unexplained": 3
+   }
+  },
+  "bitget": {
+   "quotes": 7909,
+   "gaps": 14,
+   "confirmed": 2,
+   "false_by_cause": {
+    "late_other_time": 2,
+    "others_late": 1,
+    "late_as_stamped": 6,
+    "mark_or_index": 1,
+    "wide_spread": 2
+   }
+  },
+  "bybit": {
+   "quotes": 8406,
+   "gaps": 17,
+   "confirmed": 0,
+   "false_by_cause": {
+    "others_late": 11,
+    "frozen": 2,
+    "late_as_stamped": 3,
+    "late_other_time": 1
+   }
+  },
+  "gate": {
+   "quotes": 852,
+   "gaps": 6,
+   "confirmed": 0,
+   "false_by_cause": {
+    "late_other_time": 2,
+    "others_late": 1,
+    "frozen": 1,
+    "unexplained": 2
+   }
+  },
+  "htx": {
+   "quotes": 7153,
+   "gaps": 493,
+   "confirmed": 1,
+   "false_by_cause": {
+    "unexplained": 41,
+    "frozen": 211,
+    "off_for_long": 86,
+    "wide_spread": 1,
+    "others_late": 23,
+    "late_other_time": 30,
+    "late_as_stamped": 100
+   }
+  },
+  "kucoin": {
+   "quotes": 7926,
+   "gaps": 58,
+   "confirmed": 0,
+   "false_by_cause": {
+    "others_late": 23,
+    "late_as_stamped": 1,
+    "late_other_time": 25,
+    "unexplained": 7,
+    "frozen": 2
+   }
+  },
+  "mexc": {
+   "quotes": 7921,
+   "gaps": 14,
+   "confirmed": 0,
+   "false_by_cause": {
+    "late_other_time": 10,
+    "others_late": 2,
+    "frozen": 2
+   }
+  },
+  "okx": {
+   "quotes": 7386,
+   "gaps": 1881,
+   "confirmed": 0,
+   "false_by_cause": {
+    "late_other_time": 1398,
+    "unexplained": 132,
+    "others_late": 172,
+    "frozen": 113,
+    "off_for_long": 63,
+    "late_as_stamped": 3
+   }
+  },
+  "phemex": {
+   "quotes": 7912,
+   "gaps": 78,
+   "confirmed": 8,
+   "false_by_cause": {
+    "others_late": 26,
+    "late_other_time": 15,
+    "late_as_stamped": 10,
+    "frozen": 8,
+    "wide_spread": 6,
+    "unexplained": 5
+   }
+  },
+  "whitebit": {
+   "quotes": 3965,
+   "gaps": 793,
+   "confirmed": 536,
+   "false_by_cause": {
+    "others_late": 46,
+    "late_as_stamped": 147,
+    "late_other_time": 34,
+    "frozen": 14,
+    "wide_spread": 4,
+    "unexplained": 10,
+    "off_for_long": 2
+   }
+  },
+  "zoomex": {
+   "quotes": 2818,
+   "gaps": 2153,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 24,
+    "frozen": 2100,
+    "others_late": 14,
+    "late_other_time": 15
+   }
+  }
+ },
+ "by_token": {
+  "ADA": {
+   "quotes": 4416,
+   "gaps": 193,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 12,
+    "frozen": 32,
+    "off_for_long": 7,
+    "others_late": 23,
+    "late_other_time": 109,
+    "late_as_stamped": 10
+   }
+  },
+  "AVAX": {
+   "quotes": 4438,
+   "gaps": 163,
+   "confirmed": 1,
+   "false_by_cause": {
+    "unexplained": 14,
+    "frozen": 16,
+    "off_for_long": 14,
+    "wide_spread": 1,
+    "others_late": 19,
+    "late_other_time": 95,
+    "late_as_stamped": 3
+   }
+  },
+  "BNB": {
+   "quotes": 4976,
+   "gaps": 146,
+   "confirmed": 5,
+   "false_by_cause": {
+    "unexplained": 16,
+    "frozen": 21,
+    "off_for_long": 19,
+    "others_late": 13,
+    "late_other_time": 57,
+    "late_as_stamped": 13,
+    "wide_spread": 2
+   }
+  },
+  "BTC": {
+   "quotes": 4974,
+   "gaps": 150,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 16,
+    "frozen": 18,
+    "off_for_long": 13,
+    "late_other_time": 67,
+    "late_as_stamped": 25,
+    "others_late": 11
+   }
+  },
+  "DOGE": {
+   "quotes": 4421,
+   "gaps": 189,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 19,
+    "frozen": 21,
+    "off_for_long": 13,
+    "late_other_time": 106,
+    "late_as_stamped": 10,
+    "others_late": 20
+   }
+  },
+  "DOT": {
+   "quotes": 4433,
+   "gaps": 695,
+   "confirmed": 2,
+   "false_by_cause": {
+    "unexplained": 15,
+    "frozen": 516,
+    "off_for_long": 20,
+    "others_late": 22,
+    "late_other_time": 104,
+    "late_as_stamped": 14,
+    "wide_spread": 2
+   }
+  },
+  "ETH": {
+   "quotes": 4983,
+   "gaps": 171,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 16,
+    "frozen": 20,
+    "off_for_long": 22,
+    "late_other_time": 77,
+    "late_as_stamped": 27,
+    "others_late": 9
+   }
+  },
+  "HBAR": {
+   "quotes": 5459,
+   "gaps": 741,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 15,
+    "late_other_time": 154,
+    "frozen": 505,
+    "late_as_stamped": 26,
+    "others_late": 36,
+    "off_for_long": 5
+   }
+  },
+  "LINK": {
+   "quotes": 4995,
+   "gaps": 261,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 15,
+    "frozen": 47,
+    "others_late": 28,
+    "late_other_time": 118,
+    "late_as_stamped": 48,
+    "off_for_long": 5
+   }
+  },
+  "LTC": {
+   "quotes": 4442,
+   "gaps": 235,
+   "confirmed": 0,
+   "false_by_cause": {
+    "late_other_time": 152,
+    "unexplained": 15,
+    "frozen": 19,
+    "off_for_long": 12,
+    "others_late": 23,
+    "late_as_stamped": 14
+   }
+  },
+  "SOL": {
+   "quotes": 5398,
+   "gaps": 197,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 20,
+    "frozen": 33,
+    "late_other_time": 107,
+    "others_late": 21,
+    "late_as_stamped": 13,
+    "off_for_long": 3
+   }
+  },
+  "SUI": {
+   "quotes": 5580,
+   "gaps": 827,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 20,
+    "frozen": 581,
+    "late_other_time": 140,
+    "others_late": 28,
+    "late_as_stamped": 49,
+    "off_for_long": 8,
+    "mark_or_index": 1
+   }
+  },
+  "TON": {
+   "quotes": 3306,
+   "gaps": 1362,
+   "confirmed": 539,
+   "false_by_cause": {
+    "unexplained": 20,
+    "frozen": 577,
+    "others_late": 66,
+    "late_other_time": 132,
+    "late_as_stamped": 14,
+    "wide_spread": 10,
+    "off_for_long": 4
+   }
+  },
+  "TRX": {
+   "quotes": 4421,
+   "gaps": 46,
+   "confirmed": 0,
+   "false_by_cause": {
+    "frozen": 33,
+    "late_other_time": 9,
+    "late_as_stamped": 2,
+    "unexplained": 2
+   }
+  },
+  "XRP": {
+   "quotes": 4395,
+   "gaps": 169,
+   "confirmed": 0,
+   "false_by_cause": {
+    "unexplained": 9,
+    "frozen": 17,
+    "off_for_long": 6,
+    "late_other_time": 109,
+    "others_late": 20,
+    "late_as_stamped": 8
+   }
+  }
+ },
+ "conditions": {
+  "mirror": {
+   "gaps": 2170,
+   "not_confirmed": 2170
+  },
+  "thin": {
+   "gaps": 1414,
+   "not_confirmed": 874
+  },
+  "closed": {
+   "gaps": 8,
+   "not_confirmed": 8
+  }
+ },
+ "wallets": {
+  "readable": [
+   "bitget",
+   "gate",
+   "htx",
+   "kucoin",
+   "whitebit"
+  ],
+  "not_readable": [
+   "binance",
+   "bybit",
+   "okx",
+   "mexc",
+   "zoomex",
+   "phemex"
+  ],
+  "pairs_checked": 80,
+  "closures": {
+   "kucoin/HBAR": {
+    "checks": 45,
+    "deposit_closed": 9,
+    "withdraw_closed": 9
+   }
+  }
+ }
+}

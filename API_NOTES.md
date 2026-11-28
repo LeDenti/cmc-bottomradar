@@ -21,6 +21,10 @@ Written while building, updated with each real measurement. Facts only.
 - **Keyless has no history.** Historical quotes need a key, so the screener itself cannot run keyless.
 
 - **Gaps between exchanges that are not in the order books.** On 26/11 at 10:26 UTC, 13 of 80 perpetual quotes were at least 0.20 % away from the median of their token; the exchange's own order book, read at the same instant, confirmed 2 of them (`evidence/gaps_output.txt`). The quotes were about 2 minutes old by CMC's own `last_updated`. A per-quote freshness indicator, or a flag when the price has not moved while `last_updated` has, would let a user tell a late quote from a real gap. Only 1 of the 11 false gaps carried `outlier_detected` or `exclusions`.
+<!-- QC:START -->
+- **A longer measurement of the same thing** (24 hours of CMC quotes, 70,637 quotes): 547 of 5,545 (10%) gaps of 0.20% or more were in the order book at the same instant. 49% of the others were frozen quotes whose `last_updated` kept moving. Suggestion, in [QUOTE_CHECK.md](QUOTE_CHECK.md): publish the time of the exchange's own last tick, and a flag for markets that show another exchange's order book.
+<!-- QC:END -->
+
 - **Spot market pairs are closed on Basic and on Startup.** `/v2/cryptocurrency/market-pairs/latest` answers HTTP 403 on both plans (checked on 26/11), so the gap check covers perpetuals only.
 
 ## Measured on the real API

@@ -4,7 +4,7 @@
 
 > **Example values.** The levels, rebuy zone and exit shipped in this repository are example values chosen for the demo. The live bot's settings are private and are not published here. You can load your own from `private/rule.json` (git-ignored).
 
-Since 26 Nov it also runs a second scan: **do the price gaps CoinMarketCap shows between exchanges exist in the real order books?** (they mostly do not; see below).
+It also runs a second scan built on CoinMarketCap's derivatives data: **when two exchanges look apart on CMC, is the gap in their order books?** It measures it, explains it, and proposes two small fields that would make every cross-exchange quote checkable ([QUOTE_CHECK.md](QUOTE_CHECK.md)).
 
 Track: **Markets and Trading Tools** (screener + alerts). Bonus: an MCP server so an AI agent can ask it questions.
 
@@ -22,7 +22,7 @@ Track: **Markets and Trading Tools** (screener + alerts). Bonus: an MCP server s
 
 ## The second scan: are the gaps real?
 
-A screener that lists "BTC is 0.6 % cheaper on exchange X" invites people to trade a gap. Before showing one, this tool checks it.
+CoinMarketCap returns every exchange's quote of a perpetual in one call, for one credit. A screener can turn that into "BTC is 0.6 % cheaper on exchange X", which invites people to trade a gap. Before showing one, this tool checks it.
 
 `python3 -m bottomradar_cmc gaps` takes, for 8 perpetuals, the quote of every exchange from CoinMarketCap, reads the best bid and best ask of the same exchanges from their own public endpoints at the same instant (no account, no key, no order), and compares:
 
@@ -52,7 +52,24 @@ BTC    okx           +0.20%     -0.00%     100  not in the book
 API: 8 calls, 8 credits this run
 ```
 
-11 of 13 gaps were not in the book. The quotes were about two minutes old (CMC's own `last_updated`), and nothing in the response tells a late or frozen quote from a live one. This is a data-quality check, not a trading signal: the two confirmed gaps sit on thin books.
+In this snapshot 2 of 13 gaps were in the book. The quotes were about two minutes old by CMC's own `last_updated`, and a late or frozen quote looks the same as a live one in the response. This is a data-quality check, not a trading signal: the two confirmed gaps sit on thin books.
+
+<!-- QC:START -->
+### The longer measurement
+
+One snapshot is an anecdote, so the same check ran for longer: 23.9 hours of CMC quotes in 3 stretches between 26 Nov 10:08 and 28 Nov 05:03 UTC 2026, next to 46 hours of order-book readings, on 15 perpetuals and 11 exchanges (final figures).
+
+| | In our sample |
+|---|---|
+| CMC quotes compared with a live order book | 70,637 |
+| Quotes at least 0.20% away from the median of their token ("CMC gaps") | 5,545 of 70,637 (7.8%) |
+| CMC gaps confirmed by the exchange's own book at the same instant | **547 of 5,545 (10%)** |
+| CMC gaps not confirmed by the book | **4,998 of 5,545 (90%)** |
+| Pairs of exchanges 0.20% apart on CMC that still leave more than 0.20% in the books for $1,000 | 377 of 19,649 (2%) |
+| The same for $10,000 | 0 of 19,649 (0%) |
+
+Of the unconfirmed gaps, 49% are frozen quotes whose `last_updated` keeps moving and 36% are late quotes. The write-up, with the causes, our own biases and **two fields CoinMarketCap could publish to make these quotes checkable** (a freshness indicator and a shared-book flag), is in [QUOTE_CHECK.md](QUOTE_CHECK.md); the scripts and a data sample are in [`study/`](study/).
+<!-- QC:END -->
 
 ## The rule — structure, with EXAMPLE values
 
@@ -167,7 +184,9 @@ bottomradar_cmc/
   mcp_server.py MCP tools for agents
   data/         token universe (74 + 33 liquid) and the resolved CMC ids
 tests/test_all.py
-evidence/       real calls and real responses (26 Nov 2026, example settings)
+evidence/       real calls and real responses (26 Nov 2026, example settings); quote_check/ holds the measured report
+QUOTE_CHECK.md  the longer measurement: findings, causes, two fields CMC could publish, our own biases
+study/          the samplers and the analysis behind it, with a 45-minute data sample
 API_NOTES.md    what the API made possible, and where it got in the way
 ```
 

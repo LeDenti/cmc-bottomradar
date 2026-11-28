@@ -1,0 +1,62 @@
+{
+ "what": "HTX BTC-USDT perpetual on 26 Nov 2026: CMC's quote next to HTX's two public hosts, read at the same time",
+ "cmc_quotes": [
+  {
+   "cmc_call_utc": "2026-11-26T10:08:18Z",
+   "htx_price_on_cmc": 60430.2,
+   "htx_last_updated_on_cmc": "2026-11-26T10:06:16Z",
+   "flagged_by_cmc": false,
+   "median_binance_bybit_okx_bitget_on_cmc": 60870.3
+  },
+  {
+   "cmc_call_utc": "2026-11-26T10:10:48Z",
+   "htx_price_on_cmc": 60430.2,
+   "htx_last_updated_on_cmc": "2026-11-26T10:06:16Z",
+   "flagged_by_cmc": false,
+   "median_binance_bybit_okx_bitget_on_cmc": 60901.3
+  },
+  {
+   "cmc_call_utc": "2026-11-26T10:12:04Z",
+   "htx_price_on_cmc": 60430.2,
+   "htx_last_updated_on_cmc": "2026-11-26T10:06:16Z",
+   "flagged_by_cmc": false,
+   "median_binance_bybit_okx_bitget_on_cmc": 60901.3
+  },
+  {
+   "cmc_call_utc": "2026-11-26T10:14:34Z",
+   "htx_price_on_cmc": 60430.2,
+   "htx_last_updated_on_cmc": "2026-11-26T10:12:16Z",
+   "flagged_by_cmc": false,
+   "median_binance_bybit_okx_bitget_on_cmc": 60960.95
+  },
+  {
+   "cmc_call_utc": "2026-11-26T10:17:04Z",
+   "htx_price_on_cmc": 60474.8,
+   "htx_last_updated_on_cmc": "2026-11-26T10:15:15Z",
+   "flagged_by_cmc": false,
+   "median_binance_bybit_okx_bitget_on_cmc": 60921.600000000006
+  },
+  {
+   "cmc_call_utc": "2026-11-26T10:19:34Z",
+   "htx_price_on_cmc": 60474.8,
+   "htx_last_updated_on_cmc": "2026-11-26T10:18:15Z",
+   "flagged_by_cmc": false,
+   "median_binance_bybit_okx_bitget_on_cmc": 60859.5
+  }
+ ],
+ "htx_public_hosts_read_at_utc": "2026-11-26T10:19:59Z",
+ "htx_public_hosts": {
+  "api.hbdm.com": {
+   "newest_tick_utc": "2026-11-26T07:11:38Z",
+   "btc_best_bid": 60448.5,
+   "btc_best_ask": 60448.6,
+   "btc_last": 60430.2
+  },
+  "api.hbdm.vn": {
+   "newest_tick_utc": "2026-11-26T10:20:00Z",
+   "btc_best_bid": 60882.1,
+   "btc_best_ask": 60882.2,
+   "btc_last": 60885.3
+  }
+ }
+}
