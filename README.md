@@ -6,6 +6,8 @@
 
 It also runs a second scan built on CoinMarketCap's derivatives data: **when two exchanges look apart on CMC, is the gap in their order books?** It measures it, explains it, and proposes two small fields that would make every cross-exchange quote checkable ([QUOTE_CHECK.md](QUOTE_CHECK.md)).
 
+**Demo video (2 min 41):** https://youtu.be/EvQLInt-C7U
+
 Track: **Markets and Trading Tools** (screener + alerts). Bonus: an MCP server so an AI agent can ask it questions.
 
 > Paper positions only. No orders, no wallet, no exchange keys. Not financial advice.
